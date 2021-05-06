@@ -24,18 +24,21 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
         button=findViewById(R.id.button);
+
         final ArrayList<String> item_names=new ArrayList<>();
-        final String status_payment;
-        final String status_cooking;
+        final String[] status_payment = new String[1];
+        final String[] status_cooking = new String[1];
         final String[] d = new String[1];
-        final String bill;
-        final String table;
+        final String[] bill = new String[1];
+        final String[] table = new String[1];
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                             item_names.add(temp.get("item_name"));
                         }
 
-                        System.out.println("Ordered Items are "+item_names);
+
                         Timestamp order=value.getTimestamp("order_on");
                         System.out.println("Time is "+order);
                         Date date=new Date(order.getSeconds()*1000);
@@ -64,14 +67,25 @@ public class MainActivity extends AppCompatActivity {
                         DateFormat f = new SimpleDateFormat("yyyy-MM-dd");
                         String d1 = f.format(date);
                         d[0] =d1;
-                        System.out.println("Today date is  "+ d[0]);
-                        String status=value.getString("order_status");
-                        System.out.println("Status is "+status);
 
+                        status_cooking[0] =value.getString("order_status");
+                        bill[0] =value.getString("order_total_price");
+                        status_payment[0] =value.getString("payment_status");
+                        table[0] =value.getString("table_no");
+                        System.out.println("Ordered Items are "+item_names);
+                        System.out.println("Status is "+status_cooking[0]);
+                        System.out.println("Today date is  "+ d[0]);
+                        System.out.println("Total bill is  "+ bill[0]);
+                        System.out.println("Payment status is  "+ status_payment[0]);
+                        System.out.println("Table number is "+table[0]);
                     }
                 });
+
             }
         });
+
+
+
 
     }
 
