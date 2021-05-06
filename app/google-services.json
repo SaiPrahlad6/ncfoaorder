@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1036350236955",
+    "firebase_url": "https://ncfoa-application-default-rtdb.firebaseio.com",
+    "project_id": "ncfoa-application",
+    "storage_bucket": "ncfoa-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036350236955:android:ffc5c67797bbc7816ccbbe",
+        "android_client_info": {
+          "package_name": "com.example.ncfoa_user_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036350236955-domibct0n7nlrt4eb6tbv16vtpiki4k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKoRUB-2nyKgBIJ5QlYvLMVxUuzdQJsj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036350236955-domibct0n7nlrt4eb6tbv16vtpiki4k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036350236955:android:3d5828c602c4ba826ccbbe",
+        "android_client_info": {
+          "package_name": "com.unity.ncfoaorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036350236955-domibct0n7nlrt4eb6tbv16vtpiki4k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKoRUB-2nyKgBIJ5QlYvLMVxUuzdQJsj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036350236955-domibct0n7nlrt4eb6tbv16vtpiki4k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
